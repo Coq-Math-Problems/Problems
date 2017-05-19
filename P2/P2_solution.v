@@ -101,7 +101,7 @@ Qed.
 
 Definition infvalley(f : nat -> nat)(x : nat) := forall y, x <= y -> f y = f x.
 
-Lemma infvalley_LPO : (forall f, decr f -> exists x, infvalley f x) -> LPO.
+Theorem infvalley_LPO : (forall f, decr f -> exists x, infvalley f x) -> LPO.
 Proof.
   intros H f.
   destruct (H _ (to_nat_decr f)).
@@ -206,7 +206,7 @@ Proof.
   apply e.
 Qed.
 
-Lemma LPO_infvalley : LPO -> forall f, decr f -> exists x, infvalley f x.
+Theorem LPO_infvalley : LPO -> forall f, decr f -> exists x, infvalley f x.
 Proof.
   intros H f fd.
   exact (infvalley_aux H (le_refl (f 0)) fd).
