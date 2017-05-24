@@ -27,7 +27,7 @@ Admitted.
 Theorem r_id : forall x, x * e = x.
 Admitted.
 
-(* the inverse operations *)
+(* the inverse operation *)
 Definition inv : X -> X.
 Admitted.
 
