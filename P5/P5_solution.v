@@ -75,7 +75,7 @@ Proof.
   omega.
 Qed.
 
-(* streamles stuff *)
+(* streamless stuff *)
 
 Definition streamless(X : Set) := forall f : nat -> X, 
   {i : nat & {j : nat & i <> j /\ f i = f j}}.
